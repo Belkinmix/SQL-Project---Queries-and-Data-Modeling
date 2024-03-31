@@ -1,0 +1,994 @@
+{
+    "modelName": "Data Modeling",
+    "collections": [
+        {
+            "collectionName": "Stations",
+            "type": "object",
+            "properties": [
+                {
+                    "name": "id",
+                    "hackoladeMeta": {},
+                    "isActivated": true,
+                    "index": true,
+                    "exclusiveMinimum": false,
+                    "exclusiveMaximum": false,
+                    "primaryKey": true,
+                    "mode": "int32",
+                    "alternateKey": false,
+                    "childType": "integer",
+                    "type": "numeric",
+                    "compositeKey": [
+                        "compositePrimaryKey",
+                        "compositeUniqueKey"
+                    ],
+                    "compositePrimaryKey": false,
+                    "compositeUniqueKey": false,
+                    "GUID": "417044c5-2d4b-4d95-9165-5c3ecb2f5013",
+                    "required": false,
+                    "unique": false,
+                    "error": {},
+                    "childRelationships": [
+                        "78eba527-b501-434b-b496-38c3b808ee9a",
+                        "4c1e96a8-6031-48be-ba7c-72ba051b0418",
+                        "0bca181b-4fbb-43bf-ab66-d1e10d8537e4",
+                        "1a216212-fb29-4a72-b225-35e16456d3f5"
+                    ]
+                },
+                {
+                    "name": "name",
+                    "hackoladeMeta": {},
+                    "isActivated": true,
+                    "primaryKey": false,
+                    "alternateKey": false,
+                    "childType": "varchar",
+                    "type": "string",
+                    "compositeKey": [
+                        "compositePrimaryKey",
+                        "compositeUniqueKey"
+                    ],
+                    "compositePrimaryKey": false,
+                    "compositeUniqueKey": false,
+                    "GUID": "bdd98fcb-60ed-4fb9-928f-a55f081e9d24",
+                    "error": {}
+                },
+                {
+                    "name": "online_date",
+                    "hackoladeMeta": {},
+                    "isActivated": true,
+                    "index": true,
+                    "alternateKey": false,
+                    "childType": "date",
+                    "type": "string",
+                    "compositeKey": [
+                        "compositePrimaryKey",
+                        "compositeUniqueKey"
+                    ],
+                    "compositePrimaryKey": false,
+                    "compositeUniqueKey": false,
+                    "GUID": "3c35b7df-2c94-421f-843d-cf536e35cf05",
+                    "error": {}
+                },
+                {
+                    "name": "dpcapacity",
+                    "hackoladeMeta": {},
+                    "isActivated": true,
+                    "index": true,
+                    "exclusiveMinimum": false,
+                    "exclusiveMaximum": false,
+                    "primaryKey": false,
+                    "mode": "int32",
+                    "alternateKey": false,
+                    "childType": "integer",
+                    "type": "numeric",
+                    "compositeKey": [
+                        "compositePrimaryKey",
+                        "compositeUniqueKey"
+                    ],
+                    "compositePrimaryKey": false,
+                    "compositeUniqueKey": false,
+                    "GUID": "84e334eb-adf3-4a6f-977f-6b04849be0cd",
+                    "error": {}
+                }
+            ],
+            "definitions": {
+                "type": "definitions",
+                "properties": [],
+                "GUID": "c07c1764-b193-4299-8165-54a9607b5ffe"
+            },
+            "isActivated": true,
+            "additionalProperties": false,
+            "GUID": "73baafe0-c794-405a-b761-c20b285434ca",
+            "childCollection": [],
+            "parentCollections": [],
+            "parentCollection": ""
+        },
+        {
+            "collectionName": "Location",
+            "type": "object",
+            "properties": [
+                {
+                    "name": "id",
+                    "hackoladeMeta": {},
+                    "isActivated": true,
+                    "index": true,
+                    "exclusiveMinimum": false,
+                    "exclusiveMaximum": false,
+                    "primaryKey": true,
+                    "mode": "int32",
+                    "alternateKey": false,
+                    "childType": "integer",
+                    "type": "numeric",
+                    "compositeKey": [
+                        "compositePrimaryKey",
+                        "compositeUniqueKey"
+                    ],
+                    "compositePrimaryKey": false,
+                    "compositeUniqueKey": false,
+                    "GUID": "d4f7cbdd-afe3-49de-8392-bdeba0b0fa30",
+                    "error": {},
+                    "relationshipType": "Foreign Key",
+                    "foreignCollection": "d5dc88c7-e10c-417f-89f8-f8a770e2a152",
+                    "foreignField": [
+                        "d5dc88c7-e10c-417f-89f8-f8a770e2a152",
+                        "f562ebdd-df8c-4d7f-93ad-37ee0e5b7a03"
+                    ],
+                    "parentRelationship": "5ab17a00-e9fb-4492-a3e0-a922ae7289c2"
+                },
+                {
+                    "name": "latitude",
+                    "hackoladeMeta": {},
+                    "isActivated": true,
+                    "exclusiveMinimum": false,
+                    "exclusiveMaximum": false,
+                    "primaryKey": false,
+                    "alternateKey": false,
+                    "childType": "double",
+                    "type": "numeric",
+                    "compositeKey": [
+                        "compositePrimaryKey",
+                        "compositeUniqueKey"
+                    ],
+                    "compositePrimaryKey": false,
+                    "compositeUniqueKey": false,
+                    "GUID": "e2cc50f8-4468-4ce4-ab74-aaa872217bd5",
+                    "error": {}
+                },
+                {
+                    "name": "longitude",
+                    "hackoladeMeta": {},
+                    "isActivated": true,
+                    "exclusiveMinimum": false,
+                    "exclusiveMaximum": false,
+                    "primaryKey": false,
+                    "alternateKey": false,
+                    "childType": "double",
+                    "type": "numeric",
+                    "compositeKey": [
+                        "compositePrimaryKey",
+                        "compositeUniqueKey"
+                    ],
+                    "compositePrimaryKey": false,
+                    "compositeUniqueKey": false,
+                    "GUID": "f94fa84e-6e06-4c7c-b797-fa080fc1211b",
+                    "error": {}
+                },
+                {
+                    "name": "landmark",
+                    "hackoladeMeta": {},
+                    "isActivated": true,
+                    "index": true,
+                    "exclusiveMinimum": false,
+                    "exclusiveMaximum": false,
+                    "primaryKey": false,
+                    "mode": "int32",
+                    "alternateKey": false,
+                    "childType": "integer",
+                    "type": "numeric",
+                    "compositeKey": [
+                        "compositePrimaryKey",
+                        "compositeUniqueKey"
+                    ],
+                    "compositePrimaryKey": false,
+                    "compositeUniqueKey": false,
+                    "GUID": "94d623ba-072d-4684-a7f7-228be7f90f00",
+                    "error": {}
+                }
+            ],
+            "definitions": {
+                "type": "definitions",
+                "properties": [],
+                "GUID": "0350f30a-61b6-4b42-9cb1-3c68d0377016"
+            },
+            "isActivated": true,
+            "additionalProperties": false,
+            "GUID": "0709e5e5-ee8f-40ea-8558-bb9aa40371fe",
+            "childCollection": []
+        },
+        {
+            "collectionName": "Trips",
+            "type": "object",
+            "properties": [
+                {
+                    "name": "bikeid",
+                    "hackoladeMeta": {},
+                    "isActivated": true,
+                    "index": true,
+                    "exclusiveMinimum": false,
+                    "exclusiveMaximum": false,
+                    "primaryKey": false,
+                    "mode": "int32",
+                    "alternateKey": false,
+                    "childType": "integer",
+                    "type": "numeric",
+                    "compositeKey": [
+                        "compositePrimaryKey",
+                        "compositeUniqueKey"
+                    ],
+                    "compositePrimaryKey": false,
+                    "compositeUniqueKey": false,
+                    "GUID": "f562ebdd-df8c-4d7f-93ad-37ee0e5b7a03",
+                    "error": {},
+                    "childRelationships": [
+                        "5ab17a00-e9fb-4492-a3e0-a922ae7289c2"
+                    ],
+                    "relationshipType": "Foreign Key",
+                    "foreignCollection": "73baafe0-c794-405a-b761-c20b285434ca",
+                    "foreignField": [
+                        "73baafe0-c794-405a-b761-c20b285434ca",
+                        "417044c5-2d4b-4d95-9165-5c3ecb2f5013"
+                    ],
+                    "parentRelationship": "4c1e96a8-6031-48be-ba7c-72ba051b0418"
+                },
+                {
+                    "name": "trip_id",
+                    "hackoladeMeta": {},
+                    "isActivated": true,
+                    "index": true,
+                    "exclusiveMinimum": false,
+                    "exclusiveMaximum": false,
+                    "primaryKey": true,
+                    "mode": "int32",
+                    "alternateKey": false,
+                    "childType": "integer",
+                    "type": "numeric",
+                    "compositeKey": [
+                        "compositePrimaryKey",
+                        "compositeUniqueKey"
+                    ],
+                    "compositePrimaryKey": false,
+                    "compositeUniqueKey": false,
+                    "GUID": "0364b008-6caf-4e61-9a38-393f5bf45fbd",
+                    "error": {},
+                    "childRelationships": [
+                        "cc6d7692-522f-461f-8c0f-e9b3d38fff16"
+                    ]
+                },
+                {
+                    "name": "usertype",
+                    "hackoladeMeta": {},
+                    "isActivated": true,
+                    "primaryKey": false,
+                    "alternateKey": false,
+                    "childType": "varchar",
+                    "type": "string",
+                    "compositeKey": [
+                        "compositePrimaryKey",
+                        "compositeUniqueKey"
+                    ],
+                    "compositePrimaryKey": false,
+                    "compositeUniqueKey": false,
+                    "GUID": "1f879e47-64b9-4ead-9385-5e93a958c4d7",
+                    "error": {}
+                },
+                {
+                    "name": "gender",
+                    "hackoladeMeta": {},
+                    "isActivated": true,
+                    "primaryKey": false,
+                    "alternateKey": false,
+                    "childType": "varchar",
+                    "type": "string",
+                    "compositeKey": [
+                        "compositePrimaryKey",
+                        "compositeUniqueKey"
+                    ],
+                    "compositePrimaryKey": false,
+                    "compositeUniqueKey": false,
+                    "GUID": "2ffa36d2-440f-472f-a70d-37cffbb0e762",
+                    "error": {}
+                },
+                {
+                    "name": "birthyear",
+                    "hackoladeMeta": {},
+                    "isActivated": true,
+                    "index": true,
+                    "exclusiveMinimum": false,
+                    "exclusiveMaximum": false,
+                    "primaryKey": false,
+                    "mode": "int32",
+                    "alternateKey": false,
+                    "childType": "integer",
+                    "type": "numeric",
+                    "compositeKey": [
+                        "compositePrimaryKey",
+                        "compositeUniqueKey"
+                    ],
+                    "compositePrimaryKey": false,
+                    "compositeUniqueKey": false,
+                    "GUID": "42fd50c4-14bb-4515-8321-34df0d41dd91",
+                    "error": {}
+                }
+            ],
+            "definitions": {
+                "type": "definitions",
+                "properties": [],
+                "GUID": "080f5564-b1f7-4978-a700-3dd5f47e5ba7"
+            },
+            "isActivated": true,
+            "additionalProperties": false,
+            "GUID": "d5dc88c7-e10c-417f-89f8-f8a770e2a152"
+        },
+        {
+            "collectionName": "Duration",
+            "type": "object",
+            "properties": [
+                {
+                    "name": "trip_id",
+                    "hackoladeMeta": {},
+                    "isActivated": true,
+                    "index": true,
+                    "exclusiveMinimum": false,
+                    "exclusiveMaximum": false,
+                    "primaryKey": true,
+                    "mode": "int32",
+                    "alternateKey": false,
+                    "childType": "integer",
+                    "type": "numeric",
+                    "compositeKey": [
+                        "compositePrimaryKey",
+                        "compositeUniqueKey"
+                    ],
+                    "compositePrimaryKey": false,
+                    "compositeUniqueKey": false,
+                    "GUID": "4da3acd2-153d-40eb-8537-fd4111fe27ef",
+                    "error": {},
+                    "relationshipType": "Foreign Key",
+                    "foreignCollection": "d5dc88c7-e10c-417f-89f8-f8a770e2a152",
+                    "foreignField": [
+                        "d5dc88c7-e10c-417f-89f8-f8a770e2a152",
+                        "0364b008-6caf-4e61-9a38-393f5bf45fbd"
+                    ],
+                    "parentRelationship": "cc6d7692-522f-461f-8c0f-e9b3d38fff16"
+                },
+                {
+                    "name": "tripduration",
+                    "hackoladeMeta": {},
+                    "isActivated": true,
+                    "index": true,
+                    "exclusiveMinimum": false,
+                    "exclusiveMaximum": false,
+                    "primaryKey": false,
+                    "mode": "int32",
+                    "alternateKey": false,
+                    "childType": "integer",
+                    "type": "numeric",
+                    "compositeKey": [
+                        "compositePrimaryKey",
+                        "compositeUniqueKey"
+                    ],
+                    "compositePrimaryKey": false,
+                    "compositeUniqueKey": false,
+                    "GUID": "275f1984-8533-4b65-85bb-a73d67085906",
+                    "error": {}
+                },
+                {
+                    "name": "from_station_id",
+                    "hackoladeMeta": {},
+                    "isActivated": true,
+                    "index": true,
+                    "exclusiveMinimum": false,
+                    "exclusiveMaximum": false,
+                    "primaryKey": false,
+                    "mode": "int32",
+                    "alternateKey": false,
+                    "childType": "integer",
+                    "type": "numeric",
+                    "compositeKey": [
+                        "compositePrimaryKey",
+                        "compositeUniqueKey"
+                    ],
+                    "compositePrimaryKey": false,
+                    "compositeUniqueKey": false,
+                    "GUID": "875cab6a-0d6e-4f49-aef8-8e2b03786262",
+                    "error": {},
+                    "relationshipType": "Foreign Key",
+                    "foreignCollection": "73baafe0-c794-405a-b761-c20b285434ca",
+                    "foreignField": [
+                        "73baafe0-c794-405a-b761-c20b285434ca",
+                        "417044c5-2d4b-4d95-9165-5c3ecb2f5013"
+                    ],
+                    "parentRelationship": "0bca181b-4fbb-43bf-ab66-d1e10d8537e4"
+                },
+                {
+                    "name": "to_station_id",
+                    "hackoladeMeta": {},
+                    "isActivated": true,
+                    "index": true,
+                    "exclusiveMinimum": false,
+                    "exclusiveMaximum": false,
+                    "primaryKey": false,
+                    "mode": "int32",
+                    "alternateKey": false,
+                    "childType": "integer",
+                    "type": "numeric",
+                    "compositeKey": [
+                        "compositePrimaryKey",
+                        "compositeUniqueKey"
+                    ],
+                    "compositePrimaryKey": false,
+                    "compositeUniqueKey": false,
+                    "GUID": "3a977c8b-e039-472b-8b3c-354a3636cf25",
+                    "error": {},
+                    "relationshipType": "Foreign Key",
+                    "foreignCollection": "73baafe0-c794-405a-b761-c20b285434ca",
+                    "foreignField": [
+                        "73baafe0-c794-405a-b761-c20b285434ca",
+                        "417044c5-2d4b-4d95-9165-5c3ecb2f5013"
+                    ],
+                    "parentRelationship": "1a216212-fb29-4a72-b225-35e16456d3f5"
+                },
+                {
+                    "name": "start_time",
+                    "hackoladeMeta": {},
+                    "isActivated": true,
+                    "primaryKey": false,
+                    "tPrecision": 9,
+                    "alternateKey": false,
+                    "childType": "timestamp_ntz",
+                    "type": "string",
+                    "compositeKey": [
+                        "compositePrimaryKey",
+                        "compositeUniqueKey"
+                    ],
+                    "compositePrimaryKey": false,
+                    "compositeUniqueKey": false,
+                    "GUID": "30020164-4fba-45ba-8374-1d7587447878",
+                    "error": {}
+                },
+                {
+                    "name": "end_time",
+                    "hackoladeMeta": {},
+                    "isActivated": true,
+                    "primaryKey": false,
+                    "tPrecision": 9,
+                    "alternateKey": false,
+                    "childType": "timestamp_ntz",
+                    "type": "string",
+                    "compositeKey": [
+                        "compositePrimaryKey",
+                        "compositeUniqueKey"
+                    ],
+                    "compositePrimaryKey": false,
+                    "compositeUniqueKey": false,
+                    "GUID": "74254e8e-6d8a-4e48-adc7-b86e5b109b5f",
+                    "error": {}
+                }
+            ],
+            "definitions": {
+                "type": "definitions",
+                "properties": [],
+                "GUID": "7257be6d-84e0-480c-b429-82d5a5af1dfd"
+            },
+            "isActivated": true,
+            "additionalProperties": false,
+            "GUID": "ceb6961f-3104-4cbb-a15a-8aa27bf503da",
+            "childCollection": []
+        }
+    ],
+    "buckets": [],
+    "views": [],
+    "relationships": [
+        {
+            "name": "fk Location.id to Stations.id",
+            "relationshipType": "Foreign Key",
+            "parentField": [
+                [
+                    "73baafe0-c794-405a-b761-c20b285434ca",
+                    "417044c5-2d4b-4d95-9165-5c3ecb2f5013"
+                ]
+            ],
+            "parentCardinality": "1",
+            "childField": [
+                [
+                    "0709e5e5-ee8f-40ea-8558-bb9aa40371fe",
+                    "d4f7cbdd-afe3-49de-8392-bdeba0b0fa30"
+                ]
+            ],
+            "isActivated": true,
+            "childCardinality": "1",
+            "parentCollection": "73baafe0-c794-405a-b761-c20b285434ca",
+            "childCollection": "0709e5e5-ee8f-40ea-8558-bb9aa40371fe",
+            "GUID": "78eba527-b501-434b-b496-38c3b808ee9a",
+            "level": "field",
+            "lineSize": 2,
+            "hackoladeStyles": {
+                "GUID": "06c19412-d5bd-42d9-ac0e-bb27fdc4f688",
+                "autoPositioning": true,
+                "type": "Orthogonal",
+                "thickness": 2,
+                "color": "#79c4ff",
+                "dataType": "",
+                "shape": [
+                    {
+                        "x": 1482,
+                        "y": 1239
+                    },
+                    {
+                        "x": 1380,
+                        "y": 1239
+                    },
+                    {
+                        "x": 1380,
+                        "y": 1149
+                    },
+                    {
+                        "x": 1278,
+                        "y": 1149
+                    }
+                ],
+                "sides": [
+                    "left",
+                    "right"
+                ]
+            }
+        },
+        {
+            "name": "fk Location.id to Trips.bikeid",
+            "relationshipType": "Foreign Key",
+            "parentField": [
+                [
+                    "d5dc88c7-e10c-417f-89f8-f8a770e2a152",
+                    "f562ebdd-df8c-4d7f-93ad-37ee0e5b7a03"
+                ]
+            ],
+            "parentCardinality": "n",
+            "childField": [
+                [
+                    "0709e5e5-ee8f-40ea-8558-bb9aa40371fe",
+                    "d4f7cbdd-afe3-49de-8392-bdeba0b0fa30"
+                ]
+            ],
+            "isActivated": true,
+            "childCardinality": "1",
+            "parentCollection": "d5dc88c7-e10c-417f-89f8-f8a770e2a152",
+            "childCollection": "0709e5e5-ee8f-40ea-8558-bb9aa40371fe",
+            "GUID": "5ab17a00-e9fb-4492-a3e0-a922ae7289c2",
+            "level": "field",
+            "lineSize": 2,
+            "hackoladeStyles": {
+                "GUID": "250de57e-f1cb-4019-8f84-abd315e38bae",
+                "autoPositioning": true,
+                "type": "Orthogonal",
+                "thickness": 2,
+                "color": "#79c4ff",
+                "dataType": "",
+                "shape": [
+                    {
+                        "x": 1571.5,
+                        "y": 1299
+                    },
+                    {
+                        "x": 1571.5,
+                        "y": 1336
+                    },
+                    {
+                        "x": 1584,
+                        "y": 1336
+                    },
+                    {
+                        "x": 1584,
+                        "y": 1373
+                    }
+                ],
+                "sides": [
+                    "bottom",
+                    "top"
+                ]
+            }
+        },
+        {
+            "name": "fk Trips.bikeid to Stations.id",
+            "relationshipType": "Foreign Key",
+            "parentField": [
+                [
+                    "73baafe0-c794-405a-b761-c20b285434ca",
+                    "417044c5-2d4b-4d95-9165-5c3ecb2f5013"
+                ]
+            ],
+            "parentCardinality": "1",
+            "childField": [
+                [
+                    "d5dc88c7-e10c-417f-89f8-f8a770e2a152",
+                    "f562ebdd-df8c-4d7f-93ad-37ee0e5b7a03"
+                ]
+            ],
+            "isActivated": true,
+            "childCardinality": "n",
+            "parentCollection": "73baafe0-c794-405a-b761-c20b285434ca",
+            "childCollection": "d5dc88c7-e10c-417f-89f8-f8a770e2a152",
+            "GUID": "4c1e96a8-6031-48be-ba7c-72ba051b0418",
+            "level": "field",
+            "lineSize": 2,
+            "hackoladeStyles": {
+                "GUID": "8f397afd-236a-405e-be81-1421818a091c",
+                "autoPositioning": false,
+                "type": "Orthogonal",
+                "thickness": 2,
+                "color": "#79c4ff",
+                "dataType": "",
+                "shape": [
+                    {
+                        "x": 1483,
+                        "y": 1414.3333333333333
+                    },
+                    {
+                        "x": 1358.5,
+                        "y": 1414.3333333333333
+                    },
+                    {
+                        "x": 1358.5,
+                        "y": 1189
+                    },
+                    {
+                        "x": 1278,
+                        "y": 1189
+                    }
+                ],
+                "sides": [
+                    "left",
+                    "right"
+                ]
+            }
+        },
+        {
+            "name": "fk Duration.trip_id to Trips.trip_id",
+            "relationshipType": "Foreign Key",
+            "parentField": [
+                [
+                    "d5dc88c7-e10c-417f-89f8-f8a770e2a152",
+                    "0364b008-6caf-4e61-9a38-393f5bf45fbd"
+                ]
+            ],
+            "parentCardinality": "1",
+            "childField": [
+                [
+                    "ceb6961f-3104-4cbb-a15a-8aa27bf503da",
+                    "4da3acd2-153d-40eb-8537-fd4111fe27ef"
+                ]
+            ],
+            "isActivated": true,
+            "childCardinality": "1",
+            "parentCollection": "d5dc88c7-e10c-417f-89f8-f8a770e2a152",
+            "childCollection": "ceb6961f-3104-4cbb-a15a-8aa27bf503da",
+            "GUID": "cc6d7692-522f-461f-8c0f-e9b3d38fff16",
+            "level": "field",
+            "lineSize": 2,
+            "hackoladeStyles": {
+                "GUID": "381eb5a1-dc6d-4485-89b0-57db63d21dff",
+                "autoPositioning": false,
+                "type": "Orthogonal",
+                "thickness": 2,
+                "color": "#79c4ff",
+                "dataType": "",
+                "shape": [
+                    {
+                        "x": 1294,
+                        "y": 1557.6186085318836
+                    },
+                    {
+                        "x": 1379,
+                        "y": 1557.6186085318836
+                    },
+                    {
+                        "x": 1379,
+                        "y": 1469.6666666666667
+                    },
+                    {
+                        "x": 1483,
+                        "y": 1469.6666666666667
+                    }
+                ],
+                "sides": [
+                    "right",
+                    "left"
+                ]
+            }
+        },
+        {
+            "name": "fk Duration.from_station_id to Stations.id",
+            "relationshipType": "Foreign Key",
+            "parentField": [
+                [
+                    "73baafe0-c794-405a-b761-c20b285434ca",
+                    "417044c5-2d4b-4d95-9165-5c3ecb2f5013"
+                ]
+            ],
+            "parentCardinality": "1",
+            "childField": [
+                [
+                    "ceb6961f-3104-4cbb-a15a-8aa27bf503da",
+                    "875cab6a-0d6e-4f49-aef8-8e2b03786262"
+                ]
+            ],
+            "isActivated": true,
+            "childCardinality": "n",
+            "parentCollection": "73baafe0-c794-405a-b761-c20b285434ca",
+            "childCollection": "ceb6961f-3104-4cbb-a15a-8aa27bf503da",
+            "GUID": "0bca181b-4fbb-43bf-ab66-d1e10d8537e4",
+            "level": "field",
+            "lineSize": 2,
+            "hackoladeStyles": {
+                "GUID": "01a8adce-ff63-40a1-a1fc-03fa92947747",
+                "autoPositioning": false,
+                "type": "Orthogonal",
+                "thickness": 2,
+                "color": "#79c4ff",
+                "dataType": "",
+                "shape": [
+                    {
+                        "x": 1122.0454141473192,
+                        "y": 1435
+                    },
+                    {
+                        "x": 1122.0454141473192,
+                        "y": 1229
+                    }
+                ],
+                "sides": [
+                    "top",
+                    "bottom"
+                ]
+            }
+        },
+        {
+            "name": "fk Duration.to_station_id to Stations.id",
+            "relationshipType": "Foreign Key",
+            "parentField": [
+                [
+                    "73baafe0-c794-405a-b761-c20b285434ca",
+                    "417044c5-2d4b-4d95-9165-5c3ecb2f5013"
+                ]
+            ],
+            "parentCardinality": "1",
+            "childField": [
+                [
+                    "ceb6961f-3104-4cbb-a15a-8aa27bf503da",
+                    "3a977c8b-e039-472b-8b3c-354a3636cf25"
+                ]
+            ],
+            "isActivated": true,
+            "childCardinality": "n",
+            "parentCollection": "73baafe0-c794-405a-b761-c20b285434ca",
+            "childCollection": "ceb6961f-3104-4cbb-a15a-8aa27bf503da",
+            "GUID": "1a216212-fb29-4a72-b225-35e16456d3f5",
+            "level": "field",
+            "lineSize": 2,
+            "hackoladeStyles": {
+                "GUID": "ef8bc52d-5011-4b64-b15e-68296d3850bc",
+                "autoPositioning": false,
+                "type": "Orthogonal",
+                "thickness": 2,
+                "color": "#79c4ff",
+                "dataType": "",
+                "shape": [
+                    {
+                        "x": 1179.0908282946414,
+                        "y": 1435
+                    },
+                    {
+                        "x": 1179.0908282946414,
+                        "y": 1229
+                    }
+                ],
+                "sides": [
+                    "top",
+                    "bottom"
+                ]
+            }
+        }
+    ],
+    "users": [],
+    "diagramViews": [],
+    "idToNameHashTable": {
+        "73baafe0-c794-405a-b761-c20b285434ca": "Stations",
+        "0709e5e5-ee8f-40ea-8558-bb9aa40371fe": "Location",
+        "d5dc88c7-e10c-417f-89f8-f8a770e2a152": "Trips",
+        "ceb6961f-3104-4cbb-a15a-8aa27bf503da": "Duration",
+        "417044c5-2d4b-4d95-9165-5c3ecb2f5013": "id",
+        "bdd98fcb-60ed-4fb9-928f-a55f081e9d24": "name",
+        "3c35b7df-2c94-421f-843d-cf536e35cf05": "online_date",
+        "84e334eb-adf3-4a6f-977f-6b04849be0cd": "dpcapacity",
+        "d4f7cbdd-afe3-49de-8392-bdeba0b0fa30": "id",
+        "e2cc50f8-4468-4ce4-ab74-aaa872217bd5": "latitude",
+        "f94fa84e-6e06-4c7c-b797-fa080fc1211b": "longitude",
+        "94d623ba-072d-4684-a7f7-228be7f90f00": "landmark",
+        "f562ebdd-df8c-4d7f-93ad-37ee0e5b7a03": "bikeid",
+        "0364b008-6caf-4e61-9a38-393f5bf45fbd": "trip_id",
+        "1f879e47-64b9-4ead-9385-5e93a958c4d7": "usertype",
+        "2ffa36d2-440f-472f-a70d-37cffbb0e762": "gender",
+        "42fd50c4-14bb-4515-8321-34df0d41dd91": "birthyear",
+        "4da3acd2-153d-40eb-8537-fd4111fe27ef": "trip_id",
+        "275f1984-8533-4b65-85bb-a73d67085906": "tripduration",
+        "875cab6a-0d6e-4f49-aef8-8e2b03786262": "from_station_id",
+        "3a977c8b-e039-472b-8b3c-354a3636cf25": "to_station_id",
+        "30020164-4fba-45ba-8374-1d7587447878": "start_time",
+        "74254e8e-6d8a-4e48-adc7-b86e5b109b5f": "end_time",
+        "78eba527-b501-434b-b496-38c3b808ee9a": "fk Location.id to Stations.id",
+        "5ab17a00-e9fb-4492-a3e0-a922ae7289c2": "fk Location.id to Trips.bikeid",
+        "4c1e96a8-6031-48be-ba7c-72ba051b0418": "fk Trips.bikeid to Stations.id",
+        "cc6d7692-522f-461f-8c0f-e9b3d38fff16": "fk Duration.trip_id to Trips.trip_id",
+        "0bca181b-4fbb-43bf-ab66-d1e10d8537e4": "fk Duration.from_station_id to Stations.id",
+        "1a216212-fb29-4a72-b225-35e16456d3f5": "fk Duration.to_station_id to Stations.id"
+    },
+    "definitions": {
+        "type": "definitions",
+        "properties": [],
+        "GUID": "1d961b97-50c7-4aaa-9504-ac0fc4c5759f"
+    },
+    "polyglotDefinitions": {
+        "type": "polyglotDefinitions",
+        "properties": [],
+        "GUID": "d7e2a60d-d331-40be-883c-98efad158f7e"
+    },
+    "externalDefinitions": {
+        "type": "externalDefinitions",
+        "properties": [],
+        "GUID": "871e8e35-78d6-4a1b-b105-12d3fe11ff23"
+    },
+    "sources": [],
+    "decorativeSymbols": [],
+    "dbVendor": "Polyglot",
+    "appTarget": "Polyglot",
+    "creationTS": "2023-12-09T15:17:29.730Z",
+    "GUID": "b975e280-249c-454b-9ea0-e3694cfb7294",
+    "isLineageEnabled": false,
+    "lastModifTS": "2024-03-31T23:10:02.828Z",
+    "persistenceSchemaVersion": "6",
+    "isCreatedByPlugin": true,
+    "pluginInformation": {
+        "pluginName": "Polyglot",
+        "pluginVersion": "0.0.1",
+        "pluginEngineVersion": "1.0.0"
+    },
+    "applicationInformation": {
+        "version": "6.11.9"
+    },
+    "hackoladeMeta": {},
+    "settings": {
+        "centralPane": {
+            "dbLevel": {
+                "erd": [
+                    {
+                        "GUID": "73baafe0-c794-405a-b761-c20b285434ca",
+                        "x": 1077,
+                        "y": 1109,
+                        "width": 201,
+                        "height": 120,
+                        "color": {
+                            "hex": "#ff9801"
+                        }
+                    },
+                    {
+                        "GUID": "0709e5e5-ee8f-40ea-8558-bb9aa40371fe",
+                        "x": 1482,
+                        "y": 1179,
+                        "width": 179,
+                        "height": 120,
+                        "color": {
+                            "hex": "#ff9801"
+                        }
+                    },
+                    {
+                        "GUID": "d5dc88c7-e10c-417f-89f8-f8a770e2a152",
+                        "x": 1483,
+                        "y": 1373,
+                        "width": 202,
+                        "height": 145,
+                        "color": {
+                            "hex": "#ff9801"
+                        }
+                    },
+                    {
+                        "GUID": "ceb6961f-3104-4cbb-a15a-8aa27bf503da",
+                        "x": 1065,
+                        "y": 1435,
+                        "width": 229,
+                        "height": 184,
+                        "color": {
+                            "hex": "#ff9801"
+                        }
+                    }
+                ],
+                "erdDefinitions": {
+                    "erd": [],
+                    "rootPath": [],
+                    "entities": [],
+                    "decorativeSymbols": []
+                },
+                "buckets": [],
+                "collapsedNodes": [],
+                "activeRelationship": "",
+                "activeRelationshipFields": {
+                    "childField": [],
+                    "parentField": []
+                },
+                "selectedCollections": [],
+                "displayColorPicker": false,
+                "graphView": {
+                    "erd": [
+                        {
+                            "GUID": "73baafe0-c794-405a-b761-c20b285434ca",
+                            "size": 100,
+                            "x": 1273.5954597352663,
+                            "y": 1200.7759609118348
+                        },
+                        {
+                            "GUID": "0709e5e5-ee8f-40ea-8558-bb9aa40371fe",
+                            "size": 100,
+                            "x": 1548.5729438972353,
+                            "y": 1079.6413723331452
+                        },
+                        {
+                            "GUID": "d5dc88c7-e10c-417f-89f8-f8a770e2a152",
+                            "size": 100,
+                            "x": 1516.2030309110623,
+                            "y": 1378.3097299219303
+                        },
+                        {
+                            "GUID": "ceb6961f-3104-4cbb-a15a-8aa27bf503da",
+                            "size": 100,
+                            "x": 1241.0276717911454,
+                            "y": 1499.3638624481232
+                        }
+                    ],
+                    "buckets": [],
+                    "decorativeSymbols": [],
+                    "forceLayout": true,
+                    "defaultLinkLength": 300
+                },
+                "diagramViews": [],
+                "decorativeSymbols": [],
+                "nestedCollectionsLayout": "horizontal",
+                "options": [
+                    {
+                        "autoWidth": false,
+                        "autoHeight": false,
+                        "GUID": "73baafe0-c794-405a-b761-c20b285434ca"
+                    },
+                    {
+                        "autoWidth": false,
+                        "autoHeight": false,
+                        "GUID": "0709e5e5-ee8f-40ea-8558-bb9aa40371fe"
+                    },
+                    {
+                        "autoWidth": false,
+                        "autoHeight": false,
+                        "GUID": "d5dc88c7-e10c-417f-89f8-f8a770e2a152"
+                    },
+                    {
+                        "autoWidth": false,
+                        "autoHeight": false,
+                        "GUID": "ceb6961f-3104-4cbb-a15a-8aa27bf503da"
+                    }
+                ],
+                "relationshipUpdateDisabled": false
+            },
+            "collectionLevel": {},
+            "changed": false
+        },
+        "dtDiagram": {
+            "collapsedNodes": [],
+            "shouldDistributeCollections": false
+        }
+    }
+}
